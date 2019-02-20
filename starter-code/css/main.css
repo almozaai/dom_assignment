@@ -1,0 +1,100 @@
+
+.container{
+    text-align: center;
+}
+.digi_clock {
+    padding: 0;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(7, 0, 0);
+    font-size: 34px;
+    font-family: sans-serif;
+    /* float: left; */
+  }
+ 
+.formattime{
+    text-align: center;
+}
+.digi_clock2{
+    font-size: 34px;
+    font-family: sans-serif;
+    /* float: left; */
+
+}
+button{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.btn24, .btn12{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.btn12{
+    display: block;
+}
+.analogue_clock{
+    background: url("../img/clock_face.jpg") no-repeat center ;
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    margin: 30px auto;
+    position: relative;
+    
+}
+.analogue_clock:after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+  }
+  .minutes-container, .hours-container, .seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .hours {
+    left: 9.70%;
+    position: absolute;
+    top: 10%;
+    transform-origin: 50% 100%;
+  }
+  .minutes {
+    left: 9.79%;
+    position: absolute;
+    top: 40%;
+    transform-origin: 50% 100%;
+  }
+
+  .seconds {
+    left: 9.79%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    z-index: 8;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  .hours-container {
+    animation: rotate 43200s infinite linear;
+  }
+  .minutes-container {
+    animation: rotate 3600s infinite steps(60);
+  }
+  .seconds-container {
+    animation: rotate 60s infinite steps(60);
+  }
